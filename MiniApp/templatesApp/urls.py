@@ -4,6 +4,7 @@ from templatesApp import views
 urlpatterns = [
 
     path('template/', views.renderTemplate),
+    path('employee/', views.renderEmployee),
 
 
 ]
