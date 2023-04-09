@@ -30,4 +30,11 @@ class UserRegistrationForm(forms.Form):
         return inputEmail
     '''
     def clean(self):
-        super().clean()
+        user_cleaned_data = super().clean()
+        inputFirstName = user_cleaned_data['firstName']
+        if len(inputFirstName) > 30:
+            raise forms.ValidationError('The max length of First Name is 30 characters')
+        
+        inputEmail = user_cleaned_data['email']
+        if inputEmail.find('@') == -1:
+            raise forms.ValidationError('Invalid Email : Missing @ in email')
