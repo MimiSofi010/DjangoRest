@@ -43,9 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'firstapp',
     'quoteApp',
+    'templatesApp',
     'productApp',
     'modelDemo',
     'passenger',
+    'formApp',
 ]
 
 MIDDLEWARE = [
