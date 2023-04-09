@@ -1,0 +1,14 @@
+img{
+    height: 100px;
+    width: 100px;
+    border: 10px rgb(107, 20, 206) groove;
+}
+
+h1{
+    color: red;
+    text-align: center;
+}
+
+li{
+    color: blue;
+}

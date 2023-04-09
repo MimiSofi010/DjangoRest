@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="{% static "css/product.css" %}"
+    </head>
+    <body>
+        <h1>{{heading}}</h1>
+        <ul>
+            <li>{{product1}}</li>
+            <img src="{% static "images/"|add:product1|add:".png" %}"/>
+            <li>{{product2}}</li>
+            <img src="{% static "images/"|add:product2|add:".png" %}"/>
+
+            <li>{{product3}}</li>
+            <img src="{% static "images/"|add:product3|add:".png" %}"/>
+
+
+        </ul>
+    </body>
+</html>
