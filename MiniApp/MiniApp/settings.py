@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'firstapp',
     'quoteApp',
     'productApp',
+    'modelDemo',
+    'passenger',
 ]
 
 MIDDLEWARE = [

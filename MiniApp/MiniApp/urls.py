@@ -25,5 +25,6 @@ urlpatterns = [
     path('quote/', include('quoteApp.urls')),
     path('templates/', include('templatesApp.urls')),
     path('products/', include('productApp.urls')),
+    path('models/', include('modelDemo.urls')),
 
 ]
