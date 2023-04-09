@@ -1,8 +1,10 @@
 from django import forms
+from django.core import validators
 
 class UserRegistrationForm(forms.Form):
     GENDER = [('male', 'MALE'), ('female','FEMALE'), ('other', 'OTHER')]
-    firstName=forms.CharField()
+    firstName=forms.CharField(validators=[
+        validators.MinLengthValidator(5), validators.MaxLengthValidator(20)])
     lastName=forms.CharField()
     email=forms.EmailField()
     gender = forms.CharField(widget=forms.Select(choices=GENDER), required=False)
@@ -28,7 +30,7 @@ class UserRegistrationForm(forms.Form):
         if inputEmail.find('@') == -1:
             raise forms.ValidationError('Invalid Email : Missing @ in email')
         return inputEmail
-    '''
+    
     def clean(self):
         user_cleaned_data = super().clean()
         inputFirstName = user_cleaned_data['firstName']
@@ -38,3 +40,4 @@ class UserRegistrationForm(forms.Form):
         inputEmail = user_cleaned_data['email']
         if inputEmail.find('@') == -1:
             raise forms.ValidationError('Invalid Email : Missing @ in email')
+    '''
